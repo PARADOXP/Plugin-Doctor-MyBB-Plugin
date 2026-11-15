@@ -1,0 +1,89 @@
+{
+  "group": {
+    "name": "plugin_doctor",
+    "title": "Plugin Doctor Settings",
+    "description": "Control how Plugin Doctor scans plugins, detects conflicts and keeps restoration points."
+  },
+  "settings": [
+    {
+      "name": "plugin_doctor_cache_minutes",
+      "title": "Cache Scan Results (Minutes)",
+      "description": "How long a completed health scan is reused before it is treated as stale. Set to 0 to always treat the cached scan as stale and prompt for a fresh one. Scans never start automatically; the page always asks first.",
+      "optionscode": "numeric",
+      "value": "10",
+      "disporder": "1"
+    },
+    {
+      "name": "plugin_doctor_ignored_paths",
+      "title": "Ignored Paths",
+      "description": "One path or folder name per line. Ignored paths are skipped by the file, dependency and symbol scanner. Useful for temp, vendor, backup and log folders.",
+      "optionscode": "textarea",
+      "value": "inc/plugins/temp\nvendor\nnode_modules\n.git\nbackups\nlogs\ncache",
+      "disporder": "2"
+    },
+    {
+      "name": "plugin_doctor_check_syntax",
+      "title": "Check PHP Syntax",
+      "description": "Parse plugin PHP files and report syntax errors before they can break the forum. Requires PHP 7 or newer for full parse-error reporting.",
+      "optionscode": "yesno",
+      "value": "1",
+      "disporder": "3"
+    },
+    {
+      "name": "plugin_doctor_scan_dependencies",
+      "title": "Scan Dependencies",
+      "description": "Find require and include references to other plugin files. Missing dependencies are reported before they cause a fatal error.",
+      "optionscode": "yesno",
+      "value": "1",
+      "disporder": "4"
+    },
+    {
+      "name": "plugin_doctor_scan_hook_overlaps",
+      "title": "Scan Hook Overlaps",
+      "description": "List hooks used by more than one active plugin and detect duplicate hook callbacks at the same priority. Hook overlaps are informational unless a callback is duplicated.",
+      "optionscode": "yesno",
+      "value": "1",
+      "disporder": "5"
+    },
+    {
+      "name": "plugin_doctor_show_inactive",
+      "title": "Show Inactive Plugins",
+      "description": "Include inactive plugin files in the inventory and conflict scan. Turn this off to focus only on plugins that are currently loaded.",
+      "optionscode": "yesno",
+      "value": "1",
+      "disporder": "6"
+    },
+    {
+      "name": "plugin_doctor_safe_mode_keep",
+      "title": "Safe Mode Exceptions",
+      "description": "One plugin codename per line. These active plugins stay enabled when safe mode is switched on. Plugin Doctor always stays enabled while it is running.",
+      "optionscode": "textarea",
+      "value": "plugin_doctor",
+      "disporder": "7"
+    },
+    {
+      "name": "plugin_doctor_max_plugins",
+      "title": "Maximum Plugins Per Scan",
+      "description": "Stop after this many plugin entry files. Set to 0 to scan every plugin file on the board. This is the default for automatic scans and can be overridden in the manual scan form.",
+      "optionscode": "numeric",
+      "value": "0",
+      "disporder": "8"
+    },
+    {
+      "name": "plugin_doctor_max_files_per_plugin",
+      "title": "Maximum Files Per Plugin",
+      "description": "Stop scanning one plugin after this many files. Set to 0 for no limit. A low limit protects large plugin folders from long scans.",
+      "optionscode": "numeric",
+      "value": "3000",
+      "disporder": "9"
+    },
+    {
+      "name": "plugin_doctor_max_file_size_kb",
+      "title": "Maximum File Size (KB)",
+      "description": "Skip content parsing for a single PHP file larger than this size. File size and count are still reported. Set to 0 to parse every file.",
+      "optionscode": "numeric",
+      "value": "512",
+      "disporder": "10"
+    }
+  ]
+}

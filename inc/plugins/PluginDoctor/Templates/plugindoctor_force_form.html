@@ -1,0 +1,5 @@
+<form method="post" action="{$plugin_doctor_disable_url}" class="plugin_doctor_inline plugin_doctor_confirm" data-confirm="{$plugin_doctor_disable_confirm}">
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<input type="hidden" name="plugin" value="{$plugin_doctor_codename_raw}" />
+	<button type="submit" class="plugin_doctor_button plugin_doctor_small plugin_doctor_danger">{$lang->plugin_doctor_force_disable}</button>
+</form>

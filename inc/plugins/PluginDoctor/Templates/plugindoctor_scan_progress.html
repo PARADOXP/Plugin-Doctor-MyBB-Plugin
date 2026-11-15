@@ -1,0 +1,16 @@
+<div class="plugin_doctor_scan plugin_doctor_scan_running" data-scan-progress hidden>
+	<h3>{$lang->plugin_doctor_scan_progress_title}</h3>
+	<p class="plugin_doctor_scan_status" data-scan-status>{$plugin_doctor_scan_progress_message}</p>
+	<div class="plugin_doctor_scan_bar">
+		<span data-scan-progress-bar data-percent="{$plugin_doctor_scan_progress_percent}"></span>
+	</div>
+	<ul class="plugin_doctor_scan_counts">
+		<li><strong>{$lang->plugin_doctor_scan_progress_plugins}</strong><span data-scan-plugins>{$plugin_doctor_scan_progress_plugins}</span></li>
+		<li><strong>{$lang->plugin_doctor_scan_progress_files}</strong><span data-scan-files>{$plugin_doctor_scan_progress_files}</span></li>
+	</ul>
+	<p class="plugin_doctor_scan_current">{$lang->plugin_doctor_scan_progress_current}: <code data-scan-current>{$plugin_doctor_scan_progress_current}</code></p>
+	<ol class="plugin_doctor_scan_log" data-scan-log>{$plugin_doctor_scan_progress_log}</ol>
+	<div class="plugin_doctor_scan_actions">
+		<button type="button" class="plugin_doctor_button plugin_doctor_danger" data-scan-cancel>{$lang->plugin_doctor_scan_progress_cancel}</button>
+	</div>
+</div>

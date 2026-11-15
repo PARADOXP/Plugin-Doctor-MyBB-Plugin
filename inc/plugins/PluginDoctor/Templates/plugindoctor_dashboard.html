@@ -1,0 +1,123 @@
+<div class="plugin_doctor" data-plugin-doctor-scan data-post-key="{$plugin_doctor_post_key}" data-scan-start="{$plugin_doctor_scan_start_url}" data-scan-step="{$plugin_doctor_scan_step_url}" data-scan-cancel="{$plugin_doctor_scan_cancel_url}" data-scan-active="{$plugin_doctor_scan_active}" data-scan-token="{$plugin_doctor_scan_token}" data-scan-error="{$lang->plugin_doctor_scan_progress_failed}">
+	<div class="plugin_doctor_top">
+		<div class="plugin_doctor_heading">
+			<h2>{$plugin_doctor_page_title}</h2>
+			<p>{$plugin_doctor_page_intro}</p>
+		</div>
+		<div class="plugin_doctor_top_actions">
+			<a class="plugin_doctor_button" href="{$plugin_doctor_rescan_url}">{$lang->plugin_doctor_rescan}</a>
+			<a class="plugin_doctor_button" href="{$plugin_doctor_plugins_url}">{$lang->plugin_doctor_plugin_manager}</a>
+			<a class="plugin_doctor_button" href="{$plugin_doctor_settings_url}">{$lang->plugin_doctor_settings}</a>
+		</div>
+	</div>
+
+	{$plugin_doctor_scan_prompt}
+	{$plugin_doctor_scan_progress}
+
+	<p class="plugin_doctor_meta">{$lang->plugin_doctor_last_scan}: {$plugin_doctor_generated} &middot; {$lang->plugin_doctor_version}: {$plugin_doctor_version} &middot; {$plugin_doctor_scan_time}</p>
+
+	<ul class="plugin_doctor_stats">
+		<li><strong>{$lang->plugin_doctor_stat_plugins}</strong><span>{$plugin_doctor_total}</span></li>
+		<li><strong>{$lang->plugin_doctor_stat_active}</strong><span>{$plugin_doctor_active}</span></li>
+		<li><strong>{$lang->plugin_doctor_stat_inactive}</strong><span>{$plugin_doctor_inactive}</span></li>
+		<li class="plugin_doctor_stat_critical"><strong>{$lang->plugin_doctor_stat_critical}</strong><span>{$plugin_doctor_critical}</span></li>
+		<li class="plugin_doctor_stat_warning"><strong>{$lang->plugin_doctor_stat_warnings}</strong><span>{$plugin_doctor_warnings}</span></li>
+		<li class="plugin_doctor_stat_notice"><strong>{$lang->plugin_doctor_stat_notices}</strong><span>{$plugin_doctor_notices}</span></li>
+		<li><strong>{$lang->plugin_doctor_stat_dependencies}</strong><span>{$plugin_doctor_missing_dependencies}</span></li>
+		<li><strong>{$lang->plugin_doctor_stat_symbols}</strong><span>{$plugin_doctor_symbol_collisions}</span></li>
+		<li><strong>{$lang->plugin_doctor_stat_hooks}</strong><span>{$plugin_doctor_hook_overlaps}</span></li>
+	</ul>
+
+	{$plugin_doctor_safe_panel}
+	{$plugin_doctor_quarantine_panel}
+
+	<div class="plugin_doctor_section">
+		<h3>{$lang->plugin_doctor_issues}</h3>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_issues_desc}</p>
+		<table class="general plugin_doctor_table">
+			<thead>
+				<tr>
+					<th width="110">{$lang->plugin_doctor_th_severity}</th>
+					<th>{$lang->plugin_doctor_th_issue}</th>
+					<th width="220">{$lang->plugin_doctor_th_plugin}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{$plugin_doctor_issue_rows}
+			</tbody>
+		</table>
+	</div>
+
+	<div class="plugin_doctor_section">
+		<h3>{$lang->plugin_doctor_plugins}</h3>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_plugins_desc}</p>
+		<table class="general plugin_doctor_table">
+			<thead>
+				<tr>
+					<th>{$lang->plugin_doctor_th_plugin}</th>
+					<th width="100">{$lang->plugin_doctor_th_status}</th>
+					<th width="120">{$lang->plugin_doctor_th_compatibility}</th>
+					<th width="70" class="align_center">{$lang->plugin_doctor_th_dependencies}</th>
+					<th width="70" class="align_center">{$lang->plugin_doctor_th_issues}</th>
+					<th width="190" class="align_center">{$lang->plugin_doctor_th_actions}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{$plugin_doctor_plugin_rows}
+			</tbody>
+		</table>
+		{$plugin_doctor_issue_modals}
+	</div>
+
+	<div class="plugin_doctor_section">
+		<h3>{$lang->plugin_doctor_dependencies}</h3>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_dependencies_desc}</p>
+		<table class="general plugin_doctor_table">
+			<thead>
+				<tr>
+					<th>{$lang->plugin_doctor_th_file}</th>
+					<th width="120">{$lang->plugin_doctor_th_status}</th>
+					<th width="280">{$lang->plugin_doctor_th_required_by}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{$plugin_doctor_dependency_rows}
+			</tbody>
+		</table>
+	</div>
+
+	<div class="plugin_doctor_section">
+		<h3>{$lang->plugin_doctor_hooks}</h3>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_hooks_desc}</p>
+		<table class="general plugin_doctor_table">
+			<thead>
+				<tr>
+					<th width="220">{$lang->plugin_doctor_th_hook}</th>
+					<th width="240">{$lang->plugin_doctor_th_plugins}</th>
+					<th>{$lang->plugin_doctor_th_callbacks}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{$plugin_doctor_hook_rows}
+			</tbody>
+		</table>
+	</div>
+
+	<div class="plugin_doctor_section">
+		<h3>{$lang->plugin_doctor_symbols}</h3>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_symbols_desc}</p>
+		<table class="general plugin_doctor_table">
+			<thead>
+				<tr>
+					<th width="100">{$lang->plugin_doctor_th_type}</th>
+					<th>{$lang->plugin_doctor_th_symbol}</th>
+					<th>{$lang->plugin_doctor_th_plugins}</th>
+					<th width="110">{$lang->plugin_doctor_th_severity}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{$plugin_doctor_symbol_rows}
+			</tbody>
+		</table>
+	</div>
+</div>

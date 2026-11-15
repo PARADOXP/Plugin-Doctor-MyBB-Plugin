@@ -1,0 +1,4 @@
+# Plugin Doctor quarantine.
+# Stored files are renamed with a .quarantine suffix and must never be served.
+Deny from all
+Require all denied

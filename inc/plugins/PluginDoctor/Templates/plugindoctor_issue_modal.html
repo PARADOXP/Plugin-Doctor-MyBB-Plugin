@@ -1,0 +1,13 @@
+<div class="plugin_doctor_modal" id="{$plugin_doctor_modal_id}" data-plugin-doctor-modal hidden role="dialog" aria-modal="true" aria-labelledby="{$plugin_doctor_modal_title_id}">
+	<div class="plugin_doctor_modal_backdrop" data-modal-close></div>
+	<div class="plugin_doctor_modal_dialog" role="document">
+		<div class="plugin_doctor_modal_header">
+			<h3 id="{$plugin_doctor_modal_title_id}">{$plugin_doctor_modal_title}</h3>
+			<button type="button" class="plugin_doctor_modal_close" data-modal-close aria-label="{$lang->plugin_doctor_modal_close}">&times;</button>
+		</div>
+		<p class="plugin_doctor_modal_meta">{$plugin_doctor_modal_meta}</p>
+		<div class="plugin_doctor_modal_body">
+			{$plugin_doctor_modal_issues}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="plugin_doctor_modal_issue {$plugin_doctor_modal_severity_class}">
+	<div class="plugin_doctor_modal_issue_head">
+		<span class="plugin_doctor_badge {$plugin_doctor_modal_severity_class}">{$plugin_doctor_modal_severity}</span>
+		<strong>{$plugin_doctor_modal_issue_title}</strong>
+		<span class="plugin_doctor_modal_scope">{$plugin_doctor_modal_scope}</span>
+	</div>
+	<p class="plugin_doctor_modal_detail">{$plugin_doctor_modal_issue_detail}</p>
+	{$plugin_doctor_modal_locations}
+	<p class="plugin_doctor_modal_fix"><span class="plugin_doctor_modal_label">{$lang->plugin_doctor_modal_fix}</span> {$plugin_doctor_modal_fix}</p>
+	<p class="plugin_doctor_modal_code">{$lang->plugin_doctor_modal_code}: <code>{$plugin_doctor_modal_issue_code}</code></p>
+</div>

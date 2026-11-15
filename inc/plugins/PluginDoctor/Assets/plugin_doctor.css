@@ -1,0 +1,830 @@
+/*
+ * Plugin Doctor - Admin CP dashboard.
+ *
+ * Only the layout pieces MyBB does not already provide are declared here.
+ * Tables use table.general and buttons mirror the ACP submit style.
+ */
+
+.plugin_doctor
+{
+	margin-top: 10px;
+}
+
+.plugin_doctor_top
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 18px;
+	padding: 14px 16px;
+	background: #f7f9fc;
+	border: 1px solid #dbe3ee;
+	border-radius: 6px;
+}
+
+.plugin_doctor_heading h2
+{
+	margin: 0 0 4px 0;
+	font-size: 20px;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_heading p
+{
+	margin: 0;
+	max-width: 720px;
+	color: #556;
+	line-height: 1.5;
+}
+
+.plugin_doctor_top_actions
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	justify-content: flex-end;
+}
+
+.plugin_doctor_meta
+{
+	margin: 8px 0 0 0;
+	font-size: 11px;
+	color: #777;
+}
+
+.plugin_doctor_button
+{
+	display: inline-block;
+	padding: 5px 9px;
+	border: 1px solid #9aa8b8;
+	border-radius: 4px;
+	background: #f1f4f8;
+	color: #2c4058;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 1.4;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.plugin_doctor_button:hover
+{
+	background: #e2e9f2;
+	border-color: #6d829a;
+	text-decoration: none;
+}
+
+.plugin_doctor_button.plugin_doctor_small
+{
+	padding: 3px 7px;
+	font-size: 10px;
+}
+
+.plugin_doctor_button.plugin_doctor_danger
+{
+	background: #fbeeee;
+	border-color: #d9a6a6;
+	color: #8b1d1d;
+}
+
+.plugin_doctor_button.plugin_doctor_danger:hover
+{
+	background: #f6dddd;
+	border-color: #b85d5d;
+}
+
+.plugin_doctor_stats
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	margin: 12px 0;
+	padding: 0;
+}
+
+.plugin_doctor_stats li
+{
+	min-width: 108px;
+	padding: 8px 10px;
+	border: 1px solid #dbe3ee;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.plugin_doctor_stats strong
+{
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	font-size: 9px;
+	color: #6b7787;
+}
+
+.plugin_doctor_stats span
+{
+	display: block;
+	margin-top: 2px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #24384f;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_critical
+{
+	border-color: #e5b7b7;
+	background: #fff7f7;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_critical span
+{
+	color: #9d1f1f;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_warning
+{
+	border-color: #ead6a8;
+	background: #fffdf4;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_warning span
+{
+	color: #8a6100;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_notice
+{
+	border-color: #c9d8e8;
+	background: #f7fbff;
+}
+
+.plugin_doctor_stats li.plugin_doctor_stat_notice span
+{
+	color: #2f5f86;
+}
+
+.plugin_doctor_safe
+{
+	display: flex;
+	justify-content: space-between;
+	gap: 18px;
+	margin: 14px 0;
+	padding: 12px 14px;
+	border: 1px solid #d8c28d;
+	border-left: 4px solid #c89b2c;
+	border-radius: 5px;
+	background: #fffdf3;
+}
+
+.plugin_doctor_safe h3
+{
+	margin: 0 0 4px 0;
+	font-size: 14px;
+	color: #6b4e00;
+}
+
+.plugin_doctor_safe p
+{
+	margin: 0 0 5px 0;
+	max-width: 800px;
+	color: #5f542f;
+	line-height: 1.45;
+}
+
+.plugin_doctor_safe_actions
+{
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 210px;
+}
+
+.plugin_doctor_backup
+{
+	font-weight: bold;
+}
+
+.plugin_doctor_quarantine_panel
+{
+	margin: 18px 0;
+	padding: 12px 14px;
+	border: 1px solid #c9d3e2;
+	border-left: 4px solid #6a4b9a;
+	border-radius: 5px;
+	background: #faf8fe;
+}
+
+.plugin_doctor_quarantine_panel h3
+{
+	margin: 0 0 2px 0;
+	font-size: 14px;
+	color: #43306b;
+}
+
+.plugin_doctor_quarantine_panel .plugin_doctor_section_desc
+{
+	margin: 0 0 8px 0;
+}
+
+.plugin_doctor_quarantine_panel .plugin_doctor_table
+{
+	background: #fff;
+}
+
+.plugin_doctor_issue_link
+{
+	display: inline-block;
+	min-width: 26px;
+	padding: 2px 8px;
+	border: 1px solid #b9c9dc;
+	border-radius: 11px;
+	background: #eef5fc;
+	color: #1f4f7a;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.plugin_doctor_issue_link:hover,
+.plugin_doctor_issue_link:focus
+{
+	border-color: #7ba4c9;
+	background: #dfeefa;
+	text-decoration: none;
+}
+
+.plugin_doctor_modal
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 40px 16px;
+	overflow-y: auto;
+}
+
+.plugin_doctor_modal[hidden]
+{
+	display: none !important;
+}
+
+.plugin_doctor_modal_backdrop
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(15, 25, 40, 0.55);
+}
+
+.plugin_doctor_modal_dialog
+{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 840px;
+	margin: 0 auto;
+	border: 1px solid #b9c5d4;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.plugin_doctor_modal_header
+{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 14px 16px 10px 16px;
+	border-bottom: 1px solid #dbe3ee;
+	background: #f6f9fc;
+	border-radius: 6px 6px 0 0;
+}
+
+.plugin_doctor_modal_header h3
+{
+	margin: 0;
+	font-size: 16px;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_modal_close
+{
+	padding: 0 6px;
+	border: 0;
+	background: none;
+	color: #546;
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.plugin_doctor_modal_close:hover,
+.plugin_doctor_modal_close:focus
+{
+	color: #8d2020;
+}
+
+.plugin_doctor_modal_meta
+{
+	margin: 0;
+	padding: 8px 16px;
+	border-bottom: 1px solid #eef1f5;
+	color: #667;
+	font-size: 12px;
+}
+
+.plugin_doctor_modal_body
+{
+	max-height: 70vh;
+	padding: 14px 16px 18px 16px;
+	overflow-y: auto;
+}
+
+.plugin_doctor_modal_issue
+{
+	margin: 0 0 12px 0;
+	padding: 10px 12px;
+	border: 1px solid #dde3eb;
+	border-left-width: 4px;
+	border-radius: 4px;
+	color: #333;
+}
+
+.plugin_doctor_modal_issue:last-child
+{
+	margin-bottom: 0;
+}
+
+.plugin_doctor_modal_issue_head
+{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.plugin_doctor_modal_scope
+{
+	margin-left: auto;
+	color: #667;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.plugin_doctor_modal_detail
+{
+	margin: 0 0 8px 0;
+	line-height: 1.5;
+}
+
+.plugin_doctor_modal_locations
+{
+	margin: 0 0 8px 0;
+	padding: 6px 8px;
+	list-style: none;
+	border: 1px solid #e2e8f0;
+	border-radius: 4px;
+	background: #f8fafc;
+}
+
+.plugin_doctor_modal_locations li
+{
+	padding: 1px 0;
+}
+
+.plugin_doctor_modal_locations code
+{
+	background: none;
+	border: 0;
+	padding: 0;
+	color: #34495e;
+}
+
+.plugin_doctor_modal_fix
+{
+	margin: 0 0 6px 0;
+	line-height: 1.5;
+}
+
+.plugin_doctor_modal_label
+{
+	font-weight: bold;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_modal_code
+{
+	margin: 0;
+	color: #8a939d;
+	font-size: 11px;
+}
+
+.plugin_doctor_modal_code code
+{
+	background: none;
+	border: 0;
+	padding: 0;
+	font-size: 11px;
+}
+
+.plugin_doctor_section
+{
+	margin: 18px 0;
+}
+
+.plugin_doctor_section h3
+{
+	margin: 0 0 2px 0;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #dbe3ee;
+	font-size: 15px;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_section_desc
+{
+	margin: 0 0 8px 0;
+	color: #667;
+	font-size: 11px;
+}
+
+.plugin_doctor_table
+{
+	width: 100%;
+}
+
+.plugin_doctor_table td
+{
+	vertical-align: top;
+}
+
+.plugin_doctor_table code
+{
+	font-size: 11px;
+	color: #344;
+	background: #f3f5f8;
+	border: 1px solid #e1e6ed;
+	border-radius: 3px;
+	padding: 1px 4px;
+}
+
+.plugin_doctor_sub
+{
+	margin-top: 2px;
+	font-size: 10px;
+	color: #727d8a;
+	line-height: 1.4;
+}
+
+.plugin_doctor_badge
+{
+	display: inline-block;
+	padding: 2px 6px;
+	border: 1px solid #cbd5e1;
+	border-radius: 10px;
+	background: #f6f8fa;
+	color: #435366;
+	font-size: 10px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.plugin_doctor_status_active,
+.plugin_doctor_status_ok
+{
+	border-color: #a8d3b0;
+	background: #f2fbf4;
+	color: #256a35;
+}
+
+.plugin_doctor_status_inactive,
+.plugin_doctor_status_neutral
+{
+	border-color: #d3d9e0;
+	background: #f7f8fa;
+	color: #5e6875;
+}
+
+.plugin_doctor_status_bad
+{
+	border-color: #dfb0b0;
+	background: #fff4f4;
+	color: #8d2020;
+}
+
+.plugin_doctor_severity_critical
+{
+	border-color: #dfb0b0;
+	background: #fff4f4;
+	color: #8d2020;
+}
+
+.plugin_doctor_severity_warning
+{
+	border-color: #e4ce9b;
+	background: #fffaf0;
+	color: #7c5800;
+}
+
+.plugin_doctor_severity_notice
+{
+	border-color: #bfd4e8;
+	background: #f5faff;
+	color: #2c5b82;
+}
+
+.plugin_doctor_issue_critical td
+{
+	background: #fffafa;
+}
+
+.plugin_doctor_issue_warning td
+{
+	background: #fffdf7;
+}
+
+.plugin_doctor_issue_notice td
+{
+	background: #fbfdff;
+}
+
+.plugin_doctor_table tr.plugin_doctor_active td
+{
+	background: #fbfdff;
+}
+
+.plugin_doctor_inline
+{
+	display: inline-block;
+	margin: 0 0 0 4px;
+}
+
+.plugin_doctor_empty td
+{
+	padding: 12px;
+	text-align: center;
+	color: #777;
+	font-style: italic;
+}
+
+.plugin_doctor [hidden]
+{
+	display: none !important;
+}
+
+.plugin_doctor_button.plugin_doctor_primary
+{
+	background: #2f6fa8;
+	border-color: #265b8a;
+	color: #fff;
+}
+
+.plugin_doctor_button.plugin_doctor_primary:hover
+{
+	background: #265b8a;
+	border-color: #1d4a72;
+}
+
+.plugin_doctor_button[disabled]
+{
+	opacity: 0.55;
+	cursor: default;
+}
+
+.plugin_doctor_scan
+{
+	margin: 14px 0;
+	padding: 12px 14px;
+	border: 1px solid #cddcec;
+	border-left: 4px solid #2f6fa8;
+	border-radius: 5px;
+	background: #f8fbff;
+}
+
+.plugin_doctor_scan h3
+{
+	margin: 0 0 4px 0;
+	font-size: 14px;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_scan h4
+{
+	margin: 14px 0 2px 0;
+	font-size: 12px;
+	color: #1f3b5c;
+}
+
+.plugin_doctor_scan p
+{
+	margin: 0 0 8px 0;
+	max-width: 860px;
+	color: #4c5a6b;
+	line-height: 1.45;
+}
+
+.plugin_doctor_scan_actions
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 8px;
+}
+
+.plugin_doctor_scan_fields
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 6px;
+}
+
+.plugin_doctor_scan_field
+{
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	min-width: 180px;
+	max-width: 240px;
+}
+
+.plugin_doctor_scan_field > span
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #2c4058;
+}
+
+.plugin_doctor_scan_field input
+{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.plugin_doctor_scan_field em
+{
+	font-style: normal;
+	font-size: 10px;
+	line-height: 1.35;
+	color: #74808e;
+}
+
+.plugin_doctor_scan_running
+{
+	border-color: #bfd4e8;
+	border-left-color: #2f6fa8;
+	background: #f7fbff;
+}
+
+.plugin_doctor_scan_status
+{
+	font-weight: bold;
+	color: #2c4058;
+}
+
+.plugin_doctor_scan_bar
+{
+	position: relative;
+	height: 14px;
+	margin: 6px 0 10px 0;
+	overflow: hidden;
+	border: 1px solid #c4d3e3;
+	border-radius: 7px;
+	background: #e9eff6;
+}
+
+.plugin_doctor_scan_bar span
+{
+	display: block;
+	width: 0;
+	height: 100%;
+	border-radius: 6px;
+	background: linear-gradient(90deg, #2f6fa8, #4b95cf);
+	transition: width 0.2s ease;
+}
+
+.plugin_doctor_scan_counts
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	margin: 0 0 8px 0;
+	padding: 0;
+}
+
+.plugin_doctor_scan_counts li
+{
+	min-width: 130px;
+	padding: 6px 9px;
+	border: 1px solid #d5e0ec;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.plugin_doctor_scan_counts strong
+{
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	font-size: 9px;
+	color: #6b7787;
+}
+
+.plugin_doctor_scan_counts span
+{
+	display: block;
+	margin-top: 1px;
+	font-weight: bold;
+	color: #24384f;
+}
+
+.plugin_doctor_scan_current
+{
+	font-size: 11px;
+	color: #556;
+}
+
+.plugin_doctor_scan_current code
+{
+	font-size: 11px;
+	color: #2c4058;
+	background: #eef3f9;
+	border: 1px solid #dbe4ee;
+	border-radius: 3px;
+	padding: 1px 4px;
+}
+
+.plugin_doctor_scan_log
+{
+	max-height: 190px;
+	margin: 0 0 10px 0;
+	padding: 6px 8px;
+	overflow-y: auto;
+	list-style: none;
+	border: 1px solid #dde6ef;
+	border-radius: 4px;
+	background: #fff;
+	font-size: 10px;
+}
+
+.plugin_doctor_scan_log li
+{
+	padding: 1px 0;
+	color: #4c5a6b;
+}
+
+.plugin_doctor_scan_log code
+{
+	font-size: 10px;
+	color: #344;
+	background: none;
+	border: 0;
+	padding: 0;
+}
+
+.plugin_doctor_scan_log li.plugin_doctor_log_skipped
+{
+	color: #8a939d;
+}
+
+.plugin_doctor_scan_log li.plugin_doctor_log_missing,
+.plugin_doctor_scan_log li.plugin_doctor_log_error
+{
+	color: #8d2020;
+}
+
+@media (max-width: 900px)
+{
+	.plugin_doctor_top,
+	.plugin_doctor_safe
+	{
+		display: block;
+	}
+
+	.plugin_doctor_top_actions,
+	.plugin_doctor_safe_actions
+	{
+		margin-top: 10px;
+		justify-content: flex-start;
+	}
+
+	.plugin_doctor_modal
+	{
+		padding: 16px 8px;
+	}
+
+	.plugin_doctor_modal_scope
+	{
+		margin-left: 0;
+	}
+}

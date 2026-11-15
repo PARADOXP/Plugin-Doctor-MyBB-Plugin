@@ -1,0 +1,15 @@
+<div class="plugin_doctor_safe">
+	<div class="plugin_doctor_safe_text">
+		<h3>{$lang->plugin_doctor_safe_mode}</h3>
+		<p>{$lang->plugin_doctor_safe_mode_desc}</p>
+		<p class="plugin_doctor_backup">{$plugin_doctor_backup_info}</p>
+		<p class="plugin_doctor_sub">{$plugin_doctor_safe_keep_note}</p>
+	</div>
+	<div class="plugin_doctor_safe_actions">
+		<form method="post" action="{$plugin_doctor_safe_url}" class="plugin_doctor_confirm" data-confirm="{$plugin_doctor_safe_confirm}">
+			<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+			<button type="submit" class="plugin_doctor_button plugin_doctor_danger">{$lang->plugin_doctor_safe_mode_enable}</button>
+		</form>
+		{$plugin_doctor_restore_form}
+	</div>
+</div>

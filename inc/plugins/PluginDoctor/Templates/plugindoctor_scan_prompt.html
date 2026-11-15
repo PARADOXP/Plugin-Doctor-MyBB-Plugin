@@ -1,0 +1,33 @@
+<div class="plugin_doctor_scan" data-scan-prompt>
+	<h3>{$plugin_doctor_scan_prompt_title}</h3>
+	<p>{$plugin_doctor_scan_prompt_intro}</p>
+	<div class="plugin_doctor_scan_actions">
+		<button type="button" class="plugin_doctor_button plugin_doctor_primary" data-scan-auto>{$lang->plugin_doctor_scan_prompt_auto}</button>
+		<button type="button" class="plugin_doctor_button" data-scan-manual-toggle>{$lang->plugin_doctor_scan_prompt_manual}</button>
+	</div>
+	<div class="plugin_doctor_scan_manual" data-scan-manual hidden>
+		<h4>{$lang->plugin_doctor_scan_manual_title}</h4>
+		<p class="plugin_doctor_section_desc">{$lang->plugin_doctor_scan_manual_intro}</p>
+		<div class="plugin_doctor_scan_fields">
+			<label class="plugin_doctor_scan_field">
+				<span>{$lang->plugin_doctor_scan_manual_plugins}</span>
+				<input type="number" min="0" step="1" value="{$plugin_doctor_scan_max_plugins}" data-scan-field="max_plugins" />
+				<em>{$lang->plugin_doctor_scan_manual_plugins_help}</em>
+			</label>
+			<label class="plugin_doctor_scan_field">
+				<span>{$lang->plugin_doctor_scan_manual_files}</span>
+				<input type="number" min="0" step="1" value="{$plugin_doctor_scan_max_files}" data-scan-field="max_files_per_plugin" />
+				<em>{$lang->plugin_doctor_scan_manual_files_help}</em>
+			</label>
+			<label class="plugin_doctor_scan_field">
+				<span>{$lang->plugin_doctor_scan_manual_size}</span>
+				<input type="number" min="0" step="1" value="{$plugin_doctor_scan_max_size}" data-scan-field="max_file_size_kb" />
+				<em>{$lang->plugin_doctor_scan_manual_size_help}</em>
+			</label>
+		</div>
+		<div class="plugin_doctor_scan_actions">
+			<button type="button" class="plugin_doctor_button plugin_doctor_primary" data-scan-manual-start>{$lang->plugin_doctor_scan_manual_start}</button>
+			<button type="button" class="plugin_doctor_button" data-scan-manual-cancel>{$lang->plugin_doctor_scan_manual_cancel}</button>
+		</div>
+	</div>
+</div>
