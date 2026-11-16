@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Plugin Doctor for MyBB</title>
+  <desc id="desc">A diagnostic dashboard graphic for scanning and repairing MyBB plugins.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b33"/>
+      <stop offset="1" stop-color="#172b4d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#50e3c2"/>
+      <stop offset="1" stop-color="#8cf0a5"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#9bb4d3" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#07101f" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="520" rx="28" fill="url(#grid)"/>
+  <circle cx="1450" cy="55" r="250" fill="#50e3c2" opacity=".055"/>
+  <circle cx="80" cy="500" r="240" fill="#50e3c2" opacity=".045"/>
+  <g transform="translate(100 98)">
+    <path d="M90 0 166 28v67c0 59-31 99-76 124C45 194 14 154 14 95V28L90 0Z" fill="url(#accent)"/>
+    <path d="M90 18 148 39v55c0 43-21 75-58 98-37-23-58-55-58-98V39l58-21Z" fill="#12213b"/>
+    <path d="M90 57v74M53 94h74" stroke="url(#accent)" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="156" cy="151" r="34" fill="#172b4d" stroke="#fff" stroke-opacity=".85" stroke-width="8"/>
+    <path d="m180 176 29 29" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+    <path d="m145 151 8 8 15-18" fill="none" stroke="#50e3c2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="360" y="206" fill="#50e3c2" font-size="20" font-weight="700" letter-spacing="5">MYBB ADMIN CP HEALTH SCANNER</text>
+    <text x="356" y="286" fill="#f4f8ff" font-size="64" font-weight="750" letter-spacing="-2">Plugin Doctor</text>
+    <text x="360" y="336" fill="#b9c9df" font-size="25">Find plugin problems. Recover with confidence.</text>
+    <g transform="translate(360 381)" font-size="16" font-weight="650">
+      <rect width="150" height="42" rx="21" fill="#50e3c2" fill-opacity=".13" stroke="#50e3c2" stroke-opacity=".42"/>
+      <text x="75" y="27" text-anchor="middle" fill="#8cf0d1">HEALTH SCANS</text>
+      <rect x="164" width="142" height="42" rx="21" fill="#50e3c2" fill-opacity=".13" stroke="#50e3c2" stroke-opacity=".42"/>
+      <text x="235" y="27" text-anchor="middle" fill="#8cf0d1">SAFE MODE</text>
+      <rect x="320" width="150" height="42" rx="21" fill="#50e3c2" fill-opacity=".13" stroke="#50e3c2" stroke-opacity=".42"/>
+      <text x="395" y="27" text-anchor="middle" fill="#8cf0d1">QUARANTINE</text>
+    </g>
+  </g>
+  <g transform="translate(1040 82)" filter="url(#shadow)">
+    <rect width="440" height="350" rx="18" fill="#f8fbff"/>
+    <path d="M18 0h404a18 18 0 0 1 18 18v48H0V18A18 18 0 0 1 18 0Z" fill="#eaf0f8"/>
+    <circle cx="28" cy="33" r="6" fill="#f17b79"/><circle cx="50" cy="33" r="6" fill="#f1c96b"/><circle cx="72" cy="33" r="6" fill="#55c99b"/>
+    <text x="28" y="100" fill="#182943" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">PLUGIN HEALTH OVERVIEW</text>
+    <rect x="28" y="118" width="384" height="72" rx="12" fill="#edf8f4"/>
+    <circle cx="66" cy="154" r="20" fill="#d5f3e7"/>
+    <path d="m57 154 7 7 13-15" fill="none" stroke="#1caa7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="101" y="151" fill="#23425a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650">Scan complete</text>
+    <text x="101" y="173" fill="#698095" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Plugins checked · dependencies · conflicts</text>
+    <g font-family="Inter,Segoe UI,Arial,sans-serif">
+      <rect x="28" y="210" width="116" height="82" rx="10" fill="#f0f4fa"/>
+      <text x="44" y="248" fill="#142a43" font-size="27" font-weight="750">24</text><text x="44" y="272" fill="#70849a" font-size="12">PLUGINS</text>
+      <rect x="164" y="210" width="116" height="82" rx="10" fill="#f0f4fa"/>
+      <text x="180" y="248" fill="#142a43" font-size="27" font-weight="750">03</text><text x="180" y="272" fill="#70849a" font-size="12">WARNINGS</text>
+      <rect x="300" y="210" width="112" height="82" rx="10" fill="#f0f4fa"/>
+      <text x="316" y="248" fill="#142a43" font-size="27" font-weight="750">LIVE</text><text x="316" y="272" fill="#70849a" font-size="12">PROGRESS</text>
+    </g>
+    <rect x="28" y="310" width="384" height="7" rx="4" fill="#dfe8f1"/>
+    <rect x="28" y="310" width="310" height="7" rx="4" fill="url(#accent)"/>
+  </g>
+</svg>
