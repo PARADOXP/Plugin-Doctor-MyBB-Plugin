@@ -1,5 +1,9 @@
 # Plugin Doctor for MyBB
 
+<p align="center">
+  <img src="assets/plugin-doctor-cover.svg" alt="Plugin Doctor for MyBB" width="100%">
+</p>
+
 Plugin Doctor is an Admin CP health scanner for MyBB plugins. It inventories
 every plugin entry file, parses the plugin's own folder, and reports missing
 files, broken metadata, dependency problems, syntax errors, duplicate symbols,
